@@ -16,6 +16,7 @@ a {
     background-color: #222831;
     overflow-x: hidden;
     z-index: 1;
+    border-right: 2px solid #EEEEEE;
 
     display: flex;
     justify-content: space-between;
@@ -65,7 +66,11 @@ a {
 }
 
 .sidenav .navlist>a:hover {
-    background-color: red;
+    background-color: #00ADB5;
+}
+
+.sidenav .navlist .current {
+    background-color: #00ADB5;
 }
 
 .sidenav .navlist .empty {
@@ -129,13 +134,15 @@ a {
 
 .page .title {
     height: 15%;
-    background-color: #393E46;
+    background-color: #222831;
     font-size: 50px;
 }
 
 .page .content {
-    height: 70%;
+    height: 75%;
     background-color: #393E46;
+    border-top: 2px solid #EEEEEE;
+    border-bottom: 2px solid #EEEEEE;
 
     justify-content: flex-start;
     overflow: auto;
@@ -194,12 +201,61 @@ a {
     font-size: 100px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.page .content .colors color {
+    height: 100%;
+    width: 100%;
+    border-radius: 2vh;
+
+    margin: 10px 0;
+
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    background-clip: text;
+    animation: hue 10s infinite linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page .content .colors color.fast-color {
+    animation: hue 1s infinite linear;
+}
+
+@keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+      -webkit-filter: hue-rotate(360deg);
+    }
+}
+
+.page .content .colors quote {
+    padding: 10%;
+    font-family: Satisfy;
+    font-size: 48px;
+}
+.page .content .colors quote author {
+    font-size: 16px;
 }
 
 .page .footer {
     height: 10%;
     margin-bottom: 0%;
-    background-color: #393E46;
+    background-color: #222831;
+}
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url('fonts/Satisfy-Regular.woff2') format('woff2'),
+        url('fonts/Satisfy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
