@@ -44,7 +44,7 @@ a {
     width: 80%;
 }
 
-.sidenav .navlist>a{
+.sidenav .navlist>a {
     background-color: #393E46;
     background-image: url(Order_light.png);
     background-repeat: no-repeat;
@@ -65,8 +65,12 @@ a {
     align-items: center;
 }
 
-.sidenav .navlist>a:hover {
-    background-color: #00ADB5;
+.sidenav .navlist .filled:hover {
+    border: 2px solid #00ADB5;
+    padding-left: 22px;
+    padding-top: calc(5% - 2px);
+    padding-bottom: calc(5% - 2px);
+    background-position: 6px center;
 }
 
 .sidenav .navlist .current {
@@ -81,6 +85,7 @@ a {
 
 .sidenav .navlist .empty:hover {
     background-color: #222831;
+    border: 0;
 }
 
 .sidenav input {
@@ -165,7 +170,7 @@ a {
 }
 
 .page .content .cards {
-    margin-top: 90px;
+    margin-top: calc(37.5vh - 126px);
 
     display: flex;
     align-items: center;
@@ -245,6 +250,42 @@ a {
     font-size: 16px;
 }
 
+.page .content .tables {
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+}
+
+.page .content .tables table {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-spacing: 1px;
+}
+
+.page .content .tables table tbody {
+    background-color: #222831;
+    align-items: center;
+}
+
+.page .content .tables table tbody tr {
+    height: fit-content;
+}
+
+.page .content .tables table tbody tr th {
+    background-color: #222831;
+}
+
+.page .content .tables table tbody tr td {
+    padding: 10px; 
+    background-color: #393E46;
+}
+
+.page .content .tables table tbody tr .contain-table {
+    padding: 0;
+    background-color: #393E46;
+}
+
 .page .footer {
     height: 10%;
     margin-bottom: 0%;
@@ -254,7 +295,7 @@ a {
 @font-face {
     font-family: 'Satisfy';
     src: url('fonts/Satisfy-Regular.woff2') format('woff2'),
-        url('fonts/Satisfy-Regular.woff') format('woff');
+         url('fonts/Satisfy-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
